@@ -6,4 +6,6 @@ FROM debian:stable-slim
 
 # execute the 'echo "hello world"'
 # command when the container runs
-CMD ["echo", "hello world"]
+COPY bootdevDocker /bin/goserver
+ENV PORT=8991
+CMD ["/bin/goserver"]
